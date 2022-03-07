@@ -31,7 +31,7 @@ router.post("/", async (req, res, next) => {
       plataforms,
       background_image,
     });
-    res.send(newVideogame);
+    res.status(201).send(newVideogame);
   } catch (error) {
     next(error);
   }
