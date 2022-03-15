@@ -26,10 +26,10 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      ratings: {
+      rating: {
         type: DataTypes.DECIMAL,
       },
-      plataforms: {
+      platforms: {
         type: DataTypes.STRING,
         allowNull: false,
       },
