@@ -82,6 +82,58 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+//"GET/:id"
+
+router.get("/:idVideogame", async (req, res, next) => {
+  const { idVideogame } = req.params;
+
+  //verifico si es un juego creado y me trae el detalle de la DB
+  if (idVideogame.includes("-")) {
+    let gameDb = await Videogame.findOne({
+      where: {
+        id: idVideogame,
+      },
+      include: Genres,
+    });
+    gameDb = JSON.stringify(gameDb);
+    gameDb = JSON.parse(gameDb);
+
+    //me trae un array con los generos por nombre
+    gameDb.genres = gameDb.genres.map((g) => g.name);
+    res.json(gameDb);
+  } else {
+    try {
+      const response = await axios.get(
+        `https://api.rawg.io/api/games/${idVideogame}?key=${API_KEY}` //busco por id en la API
+      );
+      let {
+        id,
+        name,
+        background_image,
+        genres,
+        description,
+        released: released,
+        rating,
+        platforms,
+      } = response.data;
+      genres = genres.map((g) => g.name); // de la API me trae un array de objetos, mapeo solo el nombre del genero
+      platforms = platforms.map((p) => p.platform.name); // de la API me trae un array de objetos, mapeo solo el nombre de la plataforma
+      return res.json({
+        id,
+        name,
+        background_image,
+        genres,
+        description,
+        released,
+        rating,
+        platforms,
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+});
+
 // router.delete("/", (req, res, next) => {
 //   res.send("Soy Delete de Videogame");
 // });
