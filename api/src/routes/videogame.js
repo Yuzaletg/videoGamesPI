@@ -134,6 +134,28 @@ router.get("/:idVideogame", async (req, res, next) => {
   }
 });
 
+// POST/videogame
+router.post("/", async (req, res, next) => {
+  let { name, description, released, rating, genres, platforms } = req.body;
+  platforms = platforms.join(", ");
+  try {
+    const gameCreated = await Videogame.findOrCreate({
+      where: {
+        name,
+        description,
+        released,
+        rating,
+        platforms,
+      },
+    });
+    // seteo genres al nuevo videojuego
+    await gameCreated[0].setGenres(genres);
+  } catch (error) {
+    next(error);
+  }
+  res.send("Videogame created succesfully");
+});
+
 // router.delete("/", (req, res, next) => {
 //   res.send("Soy Delete de Videogame");
 // });
