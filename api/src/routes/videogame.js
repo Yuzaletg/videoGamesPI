@@ -129,7 +129,8 @@ router.get("/:idVideogame", async (req, res, next) => {
         platforms,
       });
     } catch (error) {
-      next(error);
+      // next(error);
+      res.status(404).json(`No encontramos el juego con id ${idVideogame}`);
     }
   }
 });
