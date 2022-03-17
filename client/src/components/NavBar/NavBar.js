@@ -4,19 +4,22 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className="navbar-div">
-      <NavLink to="/">
-        <button>Intro</button>
-      </NavLink>
-      <NavLink to="/videogames">
-        <button>Videogames</button>
-      </NavLink>
-      <NavLink to="/crearjuego">
-        <button>CrearJuego</button>
-      </NavLink>
-      <NavLink to="/about">
-        <button>About</button>
-      </NavLink>
+    <div className="navbar">
+      <div></div>
+      <div></div>
+      <div className="nav3">
+        <div className="nav">
+          <NavLink to="/">
+            <button>Home</button>
+          </NavLink>
+          <NavLink to="/videogames">
+            <button>Videogames</button>
+          </NavLink>
+          <NavLink to="/creatgame">
+            <button>Add Games</button>
+          </NavLink>
+        </div>
+      </div>
     </div>
   );
 }

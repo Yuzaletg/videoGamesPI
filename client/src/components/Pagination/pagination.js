@@ -23,13 +23,13 @@ export default function Pagination({
           pageNumbers.map((p, i) =>
             p === currentPage ? (
               <li key={i}>
-                <button className="pag-btn" onClick={() => paginate(p)}>
+                <button className="pag-btn " onClick={() => paginate(p)}>
                   {p}
                 </button>
               </li>
             ) : (
               <li key={i}>
-                <button className="pag-btn" onClick={() => paginate(p)}>
+                <button className="pag-btn " onClick={() => paginate(p)}>
                   {p}
                 </button>
               </li>

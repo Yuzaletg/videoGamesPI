@@ -5,18 +5,16 @@
 
 .selectCont {
   padding: 10px;
-  margin: 20px;
-  width: 400px;
-  font-family: "Press Start 2P";
+  margin: 15px;
+  width: 430px;
   border-radius: 20px;
+  background-color: wheat;
 }
 
 .option {
   margin: 5px;
-  font-family: "Press Start 2P";
 }
 
 .optionGroup {
   padding: 10px;
-  font-family: "Press Start 2P";
 }

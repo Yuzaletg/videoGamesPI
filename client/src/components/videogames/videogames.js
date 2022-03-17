@@ -8,7 +8,7 @@ import FilteredBy from "../FilterBy/FilterBy";
 import "./videogames.css";
 import { getAllGames, getGenres } from "../../actions/index";
 import notFound from "../../img/llorando.gif";
-import loading from "../../img/conecting.gif";
+import loading from "../../img/200wload.gif";
 
 function Videogames({ allGames, getAllGames, getGenres }) {
   const [currentPage, setCurrentPage] = useState(1);

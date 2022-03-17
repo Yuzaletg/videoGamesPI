@@ -1,0 +1,89 @@
+.container-detail {
+  background-image: url("../../img/backgroundcreat.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.details-div {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  z-index: 1;
+  margin: 10px;
+  background-color: hsla(283, 39%, 53%);
+  opacity: 0.8;
+}
+
+.details-div p {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.div-img {
+  display: flex;
+  justify-content: center;
+}
+
+.details-div img {
+  border: 5px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  width: 600px;
+  height: 400px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  color: black;
+}
+
+.div-descr {
+  margin: 20px;
+}
+
+.div-descr p {
+  display: flex;
+  justify-content: center;
+}
+
+.descripcion {
+  text-align: justify;
+}
+
+.div-descr button {
+  background-image: linear-gradient(
+    to right,
+    #fc00ff 0%,
+    #00dbde 51%,
+    #fc00ff 100%
+  );
+}
+.div-descr button {
+  position: sticky;
+  left: 630px;
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.div-descr button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}

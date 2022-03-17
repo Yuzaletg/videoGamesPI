@@ -1,7 +1,7 @@
 .main-add {
   display: flex;
   justify-content: center;
-  background: #fff url("../../img/crear.jpg") center center/cover no-repeat;
+  background: url("../../img/back-crear.jpg") center center/cover no-repeat;
 }
 
 .container-add {
@@ -14,51 +14,45 @@
 
 .container-add h2 {
   text-align: center;
-  font-family: "Press Start 2P";
   font-size: xx-large;
-  color: black;
+  color: hsla(46, 100%, 50%);
 }
 
 .div-cont {
   display: flex;
   justify-content: center;
+  color: white;
 }
 
 .genres-div {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
   width: 650px;
-  border-radius: 10px;
-  background-color: rgb(241, 154, 22);
+  background-color: black;
 }
 
 .plat-div {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
   width: 650px;
-  border-radius: 10px;
-  background-color: rgb(241, 154, 22);
+  background-color: black;
 }
 
 .container-add label {
-  font-size: large;
-  margin: 3px;
+  font-size: 20px;
+  margin: 10px;
 }
 
 .name {
-  height: 25px;
-  width: 400px;
-  border-radius: 30px;
+  height: 35px;
+  width: 660px;
 }
 
 .dt {
-  height: 25px;
-  width: 120px;
-  border-radius: 30px;
+  height: 35px;
+  width: 660px;
 }
 
 .div-but-form {
@@ -68,22 +62,37 @@
 }
 
 .div-but-form button {
-  font-family: "Press Start 2P";
-  padding: 10px;
-  margin: 20px;
-  border-radius: 20px;
-  background-color: chartreuse;
+  background-image: linear-gradient(
+    to right,
+    #fc00ff 0%,
+    #00dbde 51%,
+    #fc00ff 100%
+  );
+  position: sticky;
+  left: 630px;
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
 }
 
 .div-but-form button:hover {
-  background-color: black;
+  background-position: right center;
   color: #fff;
+  text-decoration: none;
 }
 
 .container-add input {
-  background-color: rgb(241, 154, 22);
+  color: white;
+  background-color: black;
 }
 
 .container-add textarea {
-  background-color: rgb(241, 154, 22);
+  color: white;
+  background-color: black;
 }

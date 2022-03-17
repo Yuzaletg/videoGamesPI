@@ -15,11 +15,11 @@ function FilteredBy({ orderBy, genres, filterBy }) {
     <div className="container-div">
       <select className="selectCont" onChange={handleSelect} name="" id="">
         <option className="option" value="default">
-          TODOS...
+          FILTRAR POR...
         </option>
-        <optgroup className="optionGroup" label="DataBase">
+        <optgroup className="optionGroup" label="My Games">
           <option className="option" value="DB">
-            CREADOS
+            MY GAMES
           </option>
         </optgroup>
         <optgroup className="optionGroup" label="API">
@@ -38,14 +38,14 @@ function FilteredBy({ orderBy, genres, filterBy }) {
       </select>
       <select className="selectCont" onChange={handleSelect2} name="" id="">
         <option className="option" value="default">
-          ORDEN...
+          ORDENAR POR...
         </option>
         <optgroup className="optionGroup" label="Rating">
           <option className="option" value="asc">
-            Mayor a Menor
+            &#9650;
           </option>
           <option className="option" value="desc">
-            Menor a Mayor
+            &#9660;
           </option>
         </optgroup>
         <optgroup className="optionGroup" label="Alphabetic">

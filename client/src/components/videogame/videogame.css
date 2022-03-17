@@ -1,11 +1,10 @@
 .container-game {
   flex-wrap: wrap;
-  border: 1px solid black;
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
-  background-color: beige;
-  box-shadow: 6px 5px 9px 4px #108f1b;
+  background-color: honeydew;
+  box-shadow: 1px 1px 20px 8px hsl(327, 100%, 50%);
 }
 
 .container-game:hover {
@@ -17,8 +16,8 @@
   display: flex;
   margin: 10px;
   overflow: hidden;
-  width: 400px;
-  height: 400px;
+  width: 320px;
+  height: 200px;
 }
 
 .game-div img {
@@ -34,7 +33,7 @@
   margin-bottom: 20px;
   font-size: x-large;
   font-weight: 600;
-  color: #1411d1;
+  color: hsla(122°, 98%, 65%);
 }
 
 .infoContGenres {
@@ -58,16 +57,18 @@ button {
 }
 
 .Link {
+  margin-top: 30px;
   font-family: "Press Start 2P";
   width: 120px;
   height: 40px;
   border-radius: 20px;
-  box-shadow: 3px 2px 3px 1px #1411d1;
+  background-color: hsl(327, 100%, 50%);
+  color: hsla(192, 15%, 99%);
 }
 
 .Link:hover {
-  background-color: black;
-  color: aliceblue;
+  background-color: hsla(192, 15%, 99%);
+  color: hsla(210, 29%, 13%);
 }
 
 @keyframes myAnim {
@@ -82,4 +83,31 @@ button {
   100% {
     transform: scale(1);
   }
+}
+/* ----------------------- */
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #fc00ff 0%,
+    #00dbde 51%,
+    #fc00ff 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }

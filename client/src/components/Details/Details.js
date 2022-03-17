@@ -1,7 +1,7 @@
 import { React, useEffect } from "react";
 import { connect } from "react-redux";
 import { getVideogameDetail } from "../../actions/index";
-import Navbar from "../NavBar/NavBar";
+// import Navbar from "../NavBar/NavBar";
 import photo from "../../img/created.jpg";
 import { NavLink } from "react-router-dom";
 import "./Details.css";
@@ -10,14 +10,12 @@ function GameDetails(props) {
   const { getVideogameDetail, gameDetails } = props;
   const { idVideogame } = props.match.params;
 
-  // me carga los details del juego
   useEffect(() => {
     getVideogameDetail(idVideogame);
   }, [getVideogameDetail, idVideogame]);
 
   return (
     <div className="container-detail">
-      <Navbar />
       <div className="details-div">
         {gameDetails ? (
           <div>
@@ -33,12 +31,13 @@ function GameDetails(props) {
             )}
             {
               <p>
-                <strong>Release Date</strong>:{" "}
-                {`${gameDetails.releaseDate || "None"}`}
+                <strong>Released Date</strong>:{" "}
+                {`${gameDetails.released || "None"}`}
               </p>
             }
             <p>
-              <strong>Rating</strong>: ★ {`${gameDetails.rating}`}
+              <strong>Rating</strong>: &#11088; {`${gameDetails.rating}`}{" "}
+              &#11088;
             </p>
             {gameDetails.description &&
             gameDetails.genres &&

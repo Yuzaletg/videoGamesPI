@@ -3,11 +3,14 @@ import "./Landing.css";
 
 export default function Landing() {
   return (
-    <div className="MyImage">
-      <img className="theImage" src="" alt="" />
-      <Link to="/videogames">
-        <button className="myButton">INSERT COIN</button>
-      </Link>
+    <div className="background">
+      <div className="flex">
+        <h1 className="h1">Welcome</h1>
+        <h1 className="h1">PI VIDEOGAMES</h1>
+        <Link to="/videogames">
+          <button className="btn-neon active">PRESS START</button>
+        </Link>
+      </div>
     </div>
   );
 }

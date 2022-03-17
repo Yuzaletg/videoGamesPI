@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-import NavBar from "../NavBar/NavBar";
 import axios from "axios";
 import "./creatgame.css";
 
@@ -58,9 +57,9 @@ function CreatGame(props) {
   const validate = (form) => {
     let errors = {};
     if (!form.name) {
-      errors.name = "Game Name is required";
+      errors.name = "Name is required";
     } else if (form.name.length < 4) {
-      errors.name = "Game Name must have at least 4 characters";
+      errors.name = "Name must have at least 4 characters";
     }
     if (!form.description) {
       errors.description = "Description is required";
@@ -69,7 +68,7 @@ function CreatGame(props) {
     }
     if (!form.rating) {
       errors.rating = "Rating is required";
-    } else if (!/^[1-5]$/.test(form.rating)) {
+    } else if (!/^[1-6]$/.test(form.rating)) {
       errors.rating = "Rating must be between 1 and 5";
     }
     return errors;
@@ -95,10 +94,9 @@ function CreatGame(props) {
 
   return (
     <>
-      <NavBar />
       <div className="main-add">
         <div className="container-add">
-          <h2>CREATE GAME - DETAILS -</h2>
+          <h2>CREATE GAME</h2>
           <div className="div-cont">
             <form onSubmit={handleSubmit} onChange={handleChange}>
               <label htmlFor="name" className="title-name">
@@ -147,7 +145,7 @@ function CreatGame(props) {
                 name="rating"
                 className="dt"
                 placeholder="Rate from 0 to 5"
-                type="tel"
+                type="number"
                 id="rating"
                 maxLength="1"
                 autoComplete="off"
@@ -159,11 +157,11 @@ function CreatGame(props) {
               <div id="genres" className="genres-div">
                 <div className="Action">
                   <input name="Action" value="2" type="checkbox" id="Action" />
-                  <label htmlFor="Action">Action.</label>
+                  <label htmlFor="Action">Action</label>
                 </div>
                 <div className="indie">
                   <input name="Indie" value="1" type="checkbox" id="Indie" />
-                  <label htmlFor="Indie">Indie.</label>
+                  <label htmlFor="Indie">Indie</label>
                 </div>
                 <div className="Adventure">
                   <input
@@ -172,11 +170,11 @@ function CreatGame(props) {
                     type="checkbox"
                     id="Adventure"
                   />
-                  <label htmlFor="Adventure">Adventure.</label>
+                  <label htmlFor="Adventure">Adventure</label>
                 </div>
                 <div>
                   <input name="RPG" value="4" type="checkbox" id="RPG" />
-                  <label htmlFor="RPG">RPG.</label>
+                  <label htmlFor="RPG">RPG</label>
                 </div>
                 <div>
                   <input
@@ -185,7 +183,7 @@ function CreatGame(props) {
                     type="checkbox"
                     id="Strategy"
                   />
-                  <label htmlFor="Strategy">Strategy.</label>
+                  <label htmlFor="Strategy">Strategy</label>
                 </div>
                 <div>
                   <input
@@ -194,11 +192,11 @@ function CreatGame(props) {
                     type="checkbox"
                     id="Shooter"
                   />
-                  <label htmlFor="Shooter">Shooter.</label>
+                  <label htmlFor="Shooter">Shooter</label>
                 </div>
                 <div>
                   <input name="Casual" value="7" type="checkbox" id="Casual" />
-                  <label htmlFor="Casual">Casual.</label>
+                  <label htmlFor="Casual">Casual</label>
                 </div>
                 <div>
                   <input
@@ -207,15 +205,15 @@ function CreatGame(props) {
                     type="checkbox"
                     id="Simulation"
                   />
-                  <label htmlFor="Simulation">Simulation.</label>
+                  <label htmlFor="Simulation">Simulation</label>
                 </div>
                 <div>
                   <input name="Puzzle" value="9" type="checkbox" id="Puzzle" />
-                  <label htmlFor="Puzzle">Puzzle.</label>
+                  <label htmlFor="Puzzle">Puzzle</label>
                 </div>
                 <div>
                   <input name="Arcade" value="10" type="checkbox" id="Arcade" />
-                  <label htmlFor="Arcade">Arcade.</label>
+                  <label htmlFor="Arcade">Arcade</label>
                 </div>
                 <div>
                   <input
@@ -224,11 +222,11 @@ function CreatGame(props) {
                     type="checkbox"
                     id="Platformer"
                   />
-                  <label htmlFor="Platformer">Platformer.</label>
+                  <label htmlFor="Platformer">Platformer</label>
                 </div>
                 <div>
                   <input name="Racing" value="12" type="checkbox" id="Racing" />
-                  <label htmlFor="Racing">Racing.</label>
+                  <label htmlFor="Racing">Racing</label>
                 </div>
                 <div>
                   <input
@@ -238,12 +236,12 @@ function CreatGame(props) {
                     id="Massively-Multiplayer"
                   />
                   <label htmlFor="Massively-Multiplayer">
-                    Massively-Multiplayer.
+                    Massively-Multiplayer
                   </label>
                 </div>
                 <div>
                   <input name="Sports" value="14" type="checkbox" id="Sports" />
-                  <label htmlFor="Sports">Sports.</label>
+                  <label htmlFor="Sports">Sports</label>
                 </div>
                 <div>
                   <input
@@ -252,7 +250,7 @@ function CreatGame(props) {
                     type="checkbox"
                     id="Fighting"
                   />
-                  <label htmlFor="Fighting">Fighting.</label>
+                  <label htmlFor="Fighting">Fighting</label>
                 </div>
               </div>
               <label className="title-name">
@@ -261,19 +259,19 @@ function CreatGame(props) {
               <div id="platforms" className="plat-div">
                 <div>
                   <input name="PC" type="checkbox" id="PC" />
-                  <label htmlFor="PC">PC.</label>
+                  <label htmlFor="PC">PC</label>
                 </div>
                 <div>
                   <input name="iOS" type="checkbox" id="iOS" />
-                  <label htmlFor="iOS">iOS.</label>
+                  <label htmlFor="iOS">iOS</label>
                 </div>
                 <div>
                   <input name="Android" type="checkbox" id="Android" />
-                  <label htmlFor="Android">Android.</label>
+                  <label htmlFor="Android">Android</label>
                 </div>
                 <div>
                   <input name="macOS" type="checkbox" id="macOS" />
-                  <label htmlFor="macOS">macOS.</label>
+                  <label htmlFor="macOS">macOS</label>
                 </div>
                 <div>
                   <input
@@ -281,7 +279,7 @@ function CreatGame(props) {
                     type="checkbox"
                     id="PlayStation 4"
                   />
-                  <label htmlFor="PlayStation 4">PlayStation 4.</label>
+                  <label htmlFor="PlayStation 4">PlayStation 4</label>
                 </div>
                 <div>
                   <input
@@ -289,15 +287,15 @@ function CreatGame(props) {
                     type="checkbox"
                     id="PlayStation 5"
                   />
-                  <label htmlFor="PlayStation 5">PlayStation 5.</label>
+                  <label htmlFor="PlayStation 5">PlayStation 5</label>
                 </div>
                 <div>
                   <input name="XBOX" type="checkbox" id="XBOX" />
-                  <label htmlFor="XBOX">XBOX.</label>
+                  <label htmlFor="XBOX">XBOX</label>
                 </div>
                 <div>
                   <input name="PS Vita" type="checkbox" id="PS Vita" />
-                  <label htmlFor="PS Vita">PS Vita.</label>
+                  <label htmlFor="PS Vita">PS Vita</label>
                 </div>
               </div>
               <br />

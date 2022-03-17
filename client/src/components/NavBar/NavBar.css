@@ -1,18 +1,49 @@
-.navbar-div {
+.navbar {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-star;
+  /* background-color: #02010f; */
+  opacity: 60%;
+  height: 50px;
+  width: 100%;
+  margin: auto;
+  /* position: fixed; */
 }
 
-.navbar-div button {
-  font-family: "Press Start 2P";
-  padding: 10px;
-  margin: 20px;
+.nav {
+  margin: 0 2rem;
+  min-width: fit-content;
+  font-family: "Roboto";
+}
+
+.nav3 button {
+  background-image: linear-gradient(
+    to right,
+    #ff6e7f 0%,
+    #bfe9ff 51%,
+    #ff6e7f 100%
+  );
+}
+.nav3 button {
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: hsl(237, 100%, 9%);
+  box-shadow: 0 0 10px #eee;
+  /* ---------- */
+  display: inline-block;
+  font-weight: 600;
+  padding: 11px 27px;
+  background: 0.5s;
+  transform: scale(1, 1);
   border-radius: 30px;
-  background-color: turquoise;
+  margin: 0px 20px 0px 17px;
 }
 
-.navbar-div button:hover {
-  background-color: black;
-  color: turquoise;
+.nav3 button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }

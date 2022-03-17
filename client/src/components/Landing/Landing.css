@@ -1,44 +1,62 @@
-.myButton {
+* {
+  margin: 0;
+}
+:root {
+  --primaryColor: hsla(46, 100%, 50%);
+}
+
+.background {
+  height: 620px;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  background-image: url("../../img/fondo2.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.flex {
+  margin-top: 130px;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+.h1 {
+  text-align: center;
+  color: var(--primaryColor);
+  font-size: 50px;
+}
+
+.btn-neon {
+  background-color: transparent;
+  color: var(--primaryColor);
+  box-shadow: none;
+}
+
+.btn-neon,
+.btn-neon.active,
+.btn-neon:hover {
+  position: relative;
+  border-style: none;
+  border-radius: 4px;
+  padding: 20px 10px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+  margin: 10px;
+  box-shadow: 1px 1px 20px 8px var(--primaryColor);
+  top: 50px;
+  left: 615px;
+}
+
+.btn-neon.active::after,
+.btn-neon:hover::after {
+  content: "";
   position: absolute;
-  left: 45%;
-  top: 20%;
-  animation: myAnim 1s ease 0s infinite normal forwards;
-}
-
-.MyImage button {
-  font-family: "Press Start 2P";
-  height: 60px;
-  width: 180px;
-  border-radius: 5px;
-  border: 3px solid orangered;
-  background-color: chartreuse;
-  background: linear-gradient(90deg, chartreuse 10%, #fff 100%);
-}
-
-@keyframes myAnim {
-  0% {
-    animation-timing-function: ease-out;
-    transform: scale(1);
-    transform-origin: center center;
-  }
-
-  10% {
-    animation-timing-function: ease-in;
-    transform: scale(0.91);
-  }
-
-  17% {
-    animation-timing-function: ease-out;
-    transform: scale(0.98);
-  }
-
-  33% {
-    animation-timing-function: ease-in;
-    transform: scale(0.87);
-  }
-
-  45% {
-    animation-timing-function: ease-out;
-    transform: scale(1);
-  }
+  left: 0;
+  bottom: -34px;
+  width: 100%;
+  box-shadow: 0px 0px 10px 25px var(--primaryColor);
+  transform: perspective(2em) rotatex(35deg) scale(1, 0.45);
+  filter: blur(2em);
 }

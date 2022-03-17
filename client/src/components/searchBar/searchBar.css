@@ -1,18 +1,54 @@
 .searchbar-div {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   height: 50px;
   align-items: center;
+  justify-content: center; */
+  display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: row;
+  height: 80px;
+  border-radius: 40px;
+  min-width: 300px;
+  width: 100%;
+  max-width: 800px;
+  padding-right: 5px;
+  position: absolute;
+  top: -14px;
+  left: 590px;
 }
 
 .btn {
-  margin-left: 5px;
-  font-family: "Press Start 2P";
-  padding: 10px;
-  margin: 20px;
+  background-image: linear-gradient(
+    to right,
+    #ff6e7f 0%,
+    #bfe9ff 51%,
+    #ff6e7f 100%
+  );
+}
+.btn {
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: hsl(237, 100%, 9%);
+  box-shadow: 0 0 10px #eee;
+  /* ---------- */
+  display: inline-block;
+  font-weight: 600;
+  padding: 11px 27px;
+  background: 0.5s;
+  transform: scale(1, 1);
   border-radius: 30px;
-  background-color: rgb(224, 64, 176);
+  margin: 0px 0px 0px 7px;
+}
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 .bar-btn {
@@ -24,10 +60,10 @@
   border-radius: 20px;
 }
 
-.btn:hover {
+/* .btn:hover {
   background-color: black;
   color: rgb(224, 64, 176);
-}
+} */
 
 .bar-btn:hover {
   background-color: bisque;
