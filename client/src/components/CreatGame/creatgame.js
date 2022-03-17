@@ -68,7 +68,7 @@ function CreatGame(props) {
     }
     if (!form.rating) {
       errors.rating = "Rating is required";
-    } else if (!/^[1-6]$/.test(form.rating)) {
+    } else if (!/^[0-5]$/.test(form.rating)) {
       errors.rating = "Rating must be between 1 and 5";
     }
     return errors;
@@ -126,8 +126,9 @@ function CreatGame(props) {
               />
               <br />
               <label htmlFor="date" className="title-name">
-                <strong>released: </strong>
+                <strong>Release Date: </strong>
               </label>
+
               <br />
               <input
                 name="released"

@@ -31,32 +31,34 @@ function GameDetails(props) {
             )}
             {
               <p>
-                <strong>Released Date</strong>:{" "}
+                <strong className="strong">Released Date :</strong>{" "}
                 {`${gameDetails.released || "None"}`}
               </p>
             }
             <p>
-              <strong>Rating</strong>: &#11088; {`${gameDetails.rating}`}{" "}
-              &#11088;
+              <strong className="strong">Rating :</strong> &#11088;{" "}
+              {`${gameDetails.rating}`} &#11088;
             </p>
+
             {gameDetails.description &&
             gameDetails.genres &&
             gameDetails.platforms ? (
               <div className="div-descr">
                 {
                   <p className="descripcion">
+                    <strong className="strong">Description:</strong>
                     {gameDetails.description.replace(/(<([^>]+)>)/gi, "")}
                   </p>
                 }
                 {
                   <p>
-                    <strong>Genres</strong>:{" "}
+                    <strong className="strong">Genres :</strong>{" "}
                     {`${gameDetails.genres.join(", ")}`}
                   </p>
                 }
                 {
                   <p>
-                    <strong>Platforms</strong>:{" "}
+                    <strong className="strong">Platforms :</strong>{" "}
                     {`${
                       typeof gameDetails.platforms === "string"
                         ? gameDetails.platforms
@@ -69,11 +71,11 @@ function GameDetails(props) {
                 </NavLink>
               </div>
             ) : (
-              <h1>Cargando</h1>
+              <h1>Cargando ...</h1>
             )}
           </div>
         ) : (
-          <h1>Cargando</h1>
+          <h1>Cargando ...</h1>
         )}
       </div>
     </div>
