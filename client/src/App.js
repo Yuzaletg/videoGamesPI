@@ -11,9 +11,9 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route exact path="/videogames" component={videogames} />
-        <Route exact path="/CreatGame" component={CreatGame} />
-        <Route exact path="/videogame/:idVideogame" component={Details} />
+        <Route path="/videogames" component={videogames} />
+        <Route path="/CreatGame" component={CreatGame} />
+        <Route path="/videogame/:idVideogame" component={Details} />
         <Route path="*" component={Page404} />
       </Switch>
     </BrowserRouter>

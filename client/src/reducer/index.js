@@ -5,7 +5,7 @@ import {
   GET_GENRES,
   ORDER_BY,
   FILTER_BY,
-} from "../actions/actions";
+} from "../actions/index";
 
 const initialState = {
   allGames: [],
